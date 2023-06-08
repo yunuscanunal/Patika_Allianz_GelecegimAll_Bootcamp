@@ -1,0 +1,1 @@
+# Patika_Allianz_GelecegimAll_Bootcamp
