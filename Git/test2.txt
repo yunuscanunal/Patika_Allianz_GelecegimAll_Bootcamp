@@ -1,0 +1,4 @@
+test dosyası 
+
+
+txt dosyaları test2.txt dosyası hariç gitignore'da görmezden gelinmiş durumda.
