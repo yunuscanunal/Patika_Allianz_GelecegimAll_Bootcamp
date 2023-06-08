@@ -9,7 +9,7 @@
 
 ### About Repository
 This repository is about a [*Patika.dev*](patika.dev) bootcamp which is sponsored bby Allianz Türkiye.
-This repository is including homeworks and projects given about different topics such as --Git--, --Angular--, --SQL-- --Java-- etc. in that bootcamp.
+This repository is including homeworks and projects given about different topics such as __Git__, __Angular__, __SQL__, __Java__ etc. in this bootcamp.
 
 ---
 
