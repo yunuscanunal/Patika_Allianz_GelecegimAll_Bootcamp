@@ -1,0 +1,9 @@
+.DS_Store
+tmp/
+img/
+
+#ignore all txt files
+*.txt
+
+#staged test2.txt file
+!test2.txt
