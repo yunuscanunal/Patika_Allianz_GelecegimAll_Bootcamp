@@ -7,3 +7,6 @@ tmp/
 
 #staged test2.txt file
 !test2.txt
+
+#Lecture Notes
+SQL.md
