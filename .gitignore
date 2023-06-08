@@ -1,6 +1,6 @@
 .DS_Store
 tmp/
-img/
+
 
 #ignore all txt files
 *.txt
