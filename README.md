@@ -16,24 +16,11 @@ This repository is including homeworks and projects given about different topics
 ### About Programs
 
 **Bootcamp** is included following topics:
-Link: [Bootcamp Acceleration Program](https://app.patika.dev/egitimler/bootcamp-hizlandirma-programi-javascript)
+
 - [x] Basic Lectures
 - [x] HTML
 - [ ] CSS
 - [x] JavaScript
 - [ ] React
-
-
-
-**Frontend Web Development Path for Beginners** is included following topics:
-Link: [Frontend Web Development Path for Beginners](https://app.patika.dev/egitimler/baslangic-seviye-frontend-web-development-patikasi)
-- [x] Basic Lectures
-- [x] Visual Studio Code
-- [x] GIT
-- [x] HTML
-- [ ] CSS
-- [ ] Bootstrap
-- [x] Data Structures and Algorithms
-- [x] JavaScript
 
 ---
