@@ -110,3 +110,117 @@ FROM film
 WHERE NOT (rental_rate = 4.99 OR rental_rate = 2.99)
 ```
 Mantıksal operatörleri sıklıkla birlikte kullanırız. Yukarıdaki örneğimizde sıralayacağımız verilerin rental_rate sütunlarında bulunan değerlerinin 4.99 veya 2.99 olmamasını istiyoruz.
+
+---
+
+Lecture 4
+
+# BETWEEN ve IN
+## BETWEEN
+Aşağıdaki sorgumuzda __AND__ mantıksal operatörü yardımıyla __film__ tablosunda bulunan verilerimizi uzunluğu 140 tan küçük eşit __VE__ 100 den büyük eşit olmak üzere sıralıyoruz.
+
+```SQL
+SELECT *  FROM film
+WHERE length >= 100 AND length <= 140;
+```
+Burada temel olarak yaptığımız belirli aralıkta bulunan verileri sıralamak. Bunun __BETWEEN ... AND__ yapısını kullanarak da yapabiliriz.
+
+
+### BETWEEN AND Söz Dizimi
+
+```SQL
+SELECT <sütun_adı>, <sütun_adı>, ... FROM <tablo_adı>
+WHERE <koşul>;
+```
+
+### BETWEEN Örnek Kullanım
+```SQL
+SELECT * FROM film
+WHERE length BETWEEN 100 AND 140;
+-- WHERE length >= 100 AND length <= 140 ifadesi ile aynı sonucu verir.
+```
+Burada dikkat edilmesi gereken nokta 100 ve 140 sınır değerleri aralığa dahildir.
+
+## IN
+Şöyle bir senaryo düşünelim, yine film tablosundan uzunluğu 30, 60, 90 veya 120 dakikaya eşit olan verileri sıralayalım.
+
+```SQL
+SELECT *  FROM film
+WHERE length = 30 OR length = 60 OR length = 90 OR length = 120;
+```
+sorgusuyla verileri aldık ancak burada şöyle bir sorunumuz var peki 4 farklı değer için değil 14 farklı değer için bu sorgumuzu gerçekleştirmek için 14 ayrı OR mantıksal operatörü kullanmamız gerekirdi. Bunun yerine istenilen değerleri liste haline geitip IN anahtar kelimesiyle kullanabiliriz.
+
+### IN Söz Dizimi
+```SQL
+SELECT <sütun_adı>, <sütun_adı>, ... FROM <tablo_adı>
+WHERE <sütun_adı> IN (değer1, değer2, ...);
+```
+### IN Örnek Kullanım
+```SQL
+SELECT * FROM film
+WHERE length IN (30,60,90,120);
+```
+
+
+---
+
+Lecture 5
+
+# LIKE ve ILIKE
+Aşağıdaki sorgumuzda actor tablomuzda bulunan tüm sütunlardaki verileri first_name sütununda ki değeri 'Penelope' olmak üzere getiriyoruz.
+
+```SQL
+SELECT *
+FROM actor
+WHERE first_name = 'Penelope';
+```
+Ancak bizler bazı durumlarda bu şekilde tam eşleşme değil belirli şablonlara uyan koşulların sağlanmasını isteriz. Örneğin aşağıdaki sorgumuzda first_name sütunun 'Penelope' değerine eşit olmasını değil, ilk harfin 'P' olması koşulunu sağlar. Bunun için __LIKE__ operatörünü kullanırız.
+```SQL
+SELECT *
+FROM actor
+WHERE first_name LIKE 'P%';
+```
+Burada kullanılan % karakteri sıfır, bir veya daha fazla karakteri temsil eder ve Wildcard olarak isimlendirilir. Bir diğer wildcard karakteri _ karakteridir ve bir karakteri temsil eder.
+
+## LIKE Söz Dizimi
+```SQL
+SELECT <sütun_adı>, <sütun_adı>, ...
+FROM <tablo_adı>
+WHERE <sütun_adı> LIKE <şablon>;
+```
+### ILIKE operatörü LIKE operatörünün case - insensitive versiyonudur.
+
+---
+
+Lecture 6
+
+# DISTINCT ve COUNT
+## DISTINCT
+Şimdiye kadar yaptığımız SQL sorgularında genellikle verileri belirli koşullar altında sıraladık. Dikkat ettiyseniz bir çok durumda aynı sütün içerisinde birbirinin aynı olan veriler ile karşılaştık. Örneğin __dvdrental__ veritabanı içerisinde bulunan __film__ tablosundaki replacement_cost, rental_rate gibi sütunlar birbirini tekrar eden verilerden oluşmaktadır. Bazı durumlarda bir sütun içerisinde bulunan farklı değerleri görmek isteriz.
+```SQL
+SELECT DISTINCT rental_rate 
+FROM film;
+```
+sorgusu bize rental_rate sütununda bulunan birinden farklı 2.99, 0.99, 4.99 verilerini gösterir.
+
+### SELECT DISTINCT Söz Dizimi
+```SQL
+SELECT DISTINCT <sütun_adı>, <sütun_adı>, ...
+FROM <tablo_adı>;
+```
+## COUNT
+COUNT __aggregate__ fonksiyonu ilgili sorgu sonucunda oluşan veri sayısını bildirir. Aşağıdaki sorguda ismi 'Penelope' olan aktörleri sıralıyoruz.
+```SQL
+SELECT * 
+FROM actor
+WHERE first_name = 'Penelope';
+```
+ancak veri sayısını bulmak istersek __COUNT__ fonksiyonunu kullanırız.
+```SQL
+SELECT COUNT(*)
+FROM actor
+WHERE first_name = 'Penelope';
+```
+Yukarıda da belirttiğimiz gibi COUNT fonksiyonu ile sorgu sonucunda ortaya verileri sayıyoruz. Bu nedenle COUNT(*) veya COUNT(sütun_adı) aynı sonucu verir.
+
+---
