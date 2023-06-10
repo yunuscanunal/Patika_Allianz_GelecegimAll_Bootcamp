@@ -30,4 +30,4 @@ This repository is including homeworks and projects given about different topics
 - [ ] Java Spring Boot
 - [ ] PL/SQL
 - [ ] Angular
-- [ ] Object Oriented Programming
+
