@@ -41,7 +41,8 @@ Lecture 2
 ## LIMIT
 Şimdiye kadar yaptığımız SQL sorgularında genellikle verilerin tamamını belirli koşullar altında sıraladık. Bazı durumlarda ise koşullarımızı sağlayan verilerin tamamını değil belirli sayıda olanlarını sıralamak isteriz, bunun için LIMIT anahtar kelimesini kullanırız.
 
-Şöyle bir senaryo üzerine düşünelim. __dvdrental__ veritabanında bulunan film tablosundan B ile başlayan filmleri uzunluklarına göre en uzun olan 10 filmi sıralayalım.
+Şöyle bir senaryo üzerine düşünelim. __dvdrental__ veritabanında bulunan __film__ tablosundan B ile başlayan filmleri uzunluklarına göre en uzun olan 10 filmi sıralayalım.
+
 ```SQL
 SELECT *
 FROM film
@@ -52,7 +53,8 @@ LIMIT 10;
 Yukarıdaki sorgumuzda da görmüş olduğunuz gibi önce koşullamayı, sonra gruplamayı en son ise __LIMIT__ kullanarak istediğimiz veri sayısını belirttik.
 
 ## OFFSET
-Bazı durumlarda sonuç olarak gördüğümüz veri grubu içerisinden bazılarını "pass" geçmek isteriz. Yukarıdaki senaryomuzu tekrar düşünelim, __dvdrental__ veritabanında bulunan film tablosundan B ile başlayan filmleri uzunluklarına göre sıralayalım ancak en uzun 6 filmi "pass" geçelim ve sonrasındaki 4 filmi sıralayalım. Bu durumda __LIMIT__ 4 ve __OFFSET__ 6 olacak.
+Bazı durumlarda sonuç olarak gördüğümüz veri grubu içerisinden bazılarını "pass" geçmek isteriz. Yukarıdaki senaryomuzu tekrar düşünelim, __dvdrental__ veritabanında bulunan __film__ tablosundan B ile başlayan filmleri uzunluklarına göre sıralayalım ancak en uzun 6 filmi "pass" geçelim ve sonrasındaki 4 filmi sıralayalım. Bu durumda __LIMIT__ 4 ve __OFFSET__ 6 olacak.
+
 ```SQL
 SELECT *
 FROM film
@@ -61,3 +63,7 @@ ORDER BY length DESC
 OFFSET 6
 LIMIT 4;
 ```
+
+---
+
+Lecture 3
