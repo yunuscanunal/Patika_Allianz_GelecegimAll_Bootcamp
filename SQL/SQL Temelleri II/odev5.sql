@@ -23,12 +23,12 @@ LIMIT 5;
 --2--
 SELECT * FROM film
 WHERE title ILIKE '%n'
-ORDER BY title DESC
+ORDER BY title
 OFFSET 5
-LIMIT 10;
+LIMIT 5;
 
 --3--
 SELECT last_name FROM customer
 WHERE store_id = 1
-ORDER BY last_name
+ORDER BY last_name DESC
 LIMIT 4;
