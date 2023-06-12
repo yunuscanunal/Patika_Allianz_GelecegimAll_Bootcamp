@@ -139,3 +139,20 @@ Yukarıda bulunan görselimizde de gördüğünüz gibi STUDENT tablosunda bulun
 ---
 
 Lecture 4
+
+# Veri Tipleri I
+
+
+## Temel Veri Tipleri
+
+
+- Sayısal Veri Tipleri
+- Karakter Veri Tipleri
+- Boolean Veri Tipleri
+- Date / Time Veri Tipleri
+
+## Sayısal Veri Tipleri
+
+![Sayısal Veri Tipleri](../img/sayısal-veri.png "Sayısal Veri Tipleri")
+
+
