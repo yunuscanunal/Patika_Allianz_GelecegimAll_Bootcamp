@@ -99,3 +99,43 @@ WHERE name = 'Tresom';
 ---
 
 Lecture 3
+
+# Birincil Anahtar ve Yabancı Anahtar (PRIMARY KEY ve FOREIGN KEY)
+
+## PRIMARY KEY
+
+
+__PRIMARY KEY__ bir tabloda bulunan veri sıralarını birbirinden ayırmamızı sağlayan bir kısıtlama (constraint) yapısıdır. O tabloda bulunan veri sıralarına ait bir "benzersiz tanımlayıcıdır".
+
+
+
+- Benzersiz (Unique) olmalıdır.
+- NULL değerine sahip olamaz.
+- Bir tabloda en fazla 1 tane bulunur.
+
+
+![primarykey](../img/PrimaryKey.gif "primarykey")
+
+
+
+
+Yukarıda bulunan görselimizde de gördüğünüz gibi STUDENT tablosunda bulunan __StudentId__ sütunu PRIMARY KEY yapısındadır ve her satırı (veri kaydını) diğer satırlardan ayırmamızı sağlar.
+
+
+## FOREIGN KEY
+
+
+__FOREIGN KEY__ bir tabloda bulunan herhangi bir sütundaki verilerin genelde başka bir tablo sütununa referans vermesi durumudur, tablolar arası ilişki kurulmasını sağlar.
+
+- Bir tabloda birden fazla sütun FK olarak tanımlanabilir.
+- Aynı sütunun içerisinde aynı değerler bulunabilir.
+
+![ForeignKey](../img/ForeignKey.gif "ForeignKey")
+
+
+Yukarıda bulunan görselimizde de gördüğünüz gibi STUDENT tablosunda bulunan courseId sütunu FOREIGN KEY yapısındadır ve başka bir tablo olan "Course" tablosundaki __courseId__ sütununa referans verir.
+
+
+---
+
+Lecture 4
