@@ -15,7 +15,20 @@ Kolay Gelsin.
 */
 
 --1--
+SELECT * FROM film
+WHERE title ILIKE '%n'
+ORDER BY title
+LIMIT 5;
 
 --2--
+SELECT * FROM film
+WHERE title ILIKE '%n'
+ORDER BY title DESC
+OFFSET 5
+LIMIT 10;
 
 --3--
+SELECT last_name FROM customer
+WHERE store_id = 1
+ORDER BY last_name
+LIMIT 4;
