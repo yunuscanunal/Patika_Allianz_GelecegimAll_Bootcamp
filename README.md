@@ -21,7 +21,7 @@ This repository is including homeworks and projects given about different topics
 
 - [x] GIT
 - [x] Frontend Web Development
-- [ ] SQL
+- [x] SQL
 - [x] Software, Internet, Coding and Concepts
 - [ ] Object Oriented Programming
 - [ ] Java 101
