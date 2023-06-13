@@ -142,3 +142,105 @@ Lecture 4
 
 ![Sayısal Veri Tipleri](../img/sayısal-veri.png "Sayısal Veri Tipleri")
 
+---
+
+Lecture 5
+
+# Veri Tipleri II
+
+## Karakter Veri Tipleri
+
+![Karakter Veri Tipleri](../img/karakter-veri.png "Karakter Veri Tipleri")
+
+Sınırlı sayıda karekter kullanımı için VARCHAR veya CHAR veri tipleri kullanılır. VARCHAR veri tipi doldurulmayan karakterleri yok sayar, CHAR veri tipi ise doldurulmayan karakterler için boşluk bırakır. Sınırsız karekter kullanımı için ise TEXT veri tipi kullanılır.
+
+## Boolean Veri Tipleri
+
+TRUE, FALSE veya NULL (Bilinmeyen) değerlerini alabilirler.
+
+- TRUE: true, yes, on, 1
+- FALSE: false, no, off, 0
+
+## Zaman / Tarih Veri Tipleri
+
+![Zaman / Tarih Veri Tipleri](../img/date.png "Zaman / Tarih Veri Tipleri")
+
+---
+
+Lecture 6
+
+# ALTER ve NOT NULL
+
+## NOT NULL
+
+Birçok durumda bizler herhangi bir sütuna yazılacak olan verilere belirli kısıtlamalar getirmek isteriz. Örneğin yaş sütünunda sadece sayısal verilerin olmasını isteriz ya da kullanıcı adı sütununda bilinmeyen (NULL) değerlerin olasını istemeyiz. Bu gibi durumlarda ilgili sütunda __CONSTRAINT__ kısıtlama yapıları kullanılır.
+
+__NULL__ bilinmeyen veri anlamındadır. Boş string veya 0 verilerinden farklıdır. Şu şekilde bir senaryo düşünelim bir kullanıcının email hesabı yoksa buradaki veriyi boş string şeklinde düşünebiliriz. Acak eğer kullanıcının maili var ancak ne olduğunu bilmiyorsak bu durumda o veri NULL (bilinmeyen) olarak tanımlanabilir.
+
+### NOT NULL Kullanımı
+
+Employees şeklinde bir tablomuzu oluşturalım. Tablodaki first_name ve last_name sütunlarında bilinmeyen veri istemiyoruz, bu sütunlarda NOT NULL kısıtlama yapısı kullanabiliriz.
+```SQL
+CREATE TABLE Employees (     id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    age INTEGER
+);
+```
+## ALTER ve NOT NULL
+
+ALTER anahtar kelimesini varolan bir tabloda değişiklik yapmak için kullanılır. Aşağıdaki senaryoda bir sütuna __NOT NULL__ kısıtlaması vermek için aşağıdaki söz dizimi yapısı kullanılır.
+```SQL
+ALTER TABLE <tablo_adı> ALTER COLUMN <sütun_adı>
+SET NOT NULL;
+```
+
+---
+
+Lecture 7
+
+# UNIQUE
+
+__UNIQUE__ kısıtlaması ile uyguladığımız sütundaki verilerin birbirlerinden farklı benzersiz olmalarını isteriz. PRIMARY KEY kısıtlaması kendiliğinden __UNIQUE__ kısıtlamasına sahiptir.
+
+NOT NULL kısıtlamasında olduğu gibi tablo oluştururken veya ALTER komutu ile beraber tablo oluştuktan sonra da kullanabiliriz.
+
+## UNIQUE Kullanımı
+
+Employees şeklinde bir tablomuzu oluşturalım. Tablodaki email sütununda bulunan verileri __UNIQUE__ olarak belirlemek istersek.
+```SQL
+CREATE TABLE Employees (     ---
+    emaile VARCHAR(100) UNIQUE,
+    ----
+);
+```
+## ALTER ve UNIQUE
+
+ALTER TABLE <tablo_adı> ADD UNIQUE <sütun_adı>
+
+Bu arada herhangi bir sütuna __UNIQUE__ kısıtlaması getirirsek ve öncesinde UNIQUE olmayan verileri kaldrmamız gerekir.
+
+---
+
+Lecture 8
+
+# CHECK
+__CHECK__ kısıtlaması ile uyguladığımız sütundaki verilere belirli koşullar verebiliriz. Örneğin age (yaş) olarak belirlediğimiz bir sütuna negatif değerler verebiliriz veya web portaline üye olan kullanıcıların yaşlarının 18 yaşından büyük olması gibi kendi senaryolarımıza uygun başka kıstlamalar da vermek isteyebiliriz.
+
+CHECK kısıtlamasını da tablo oluştururken veya ALTER komutu ile beraber tablo oluştuktan sonra kullanabiliriz.
+
+## CHECK Kullanımı
+Employees şeklinde bir tablomuzu oluşturalım. Tablodaki age sütununda bulunan verilerin 18'e eşit veya büyük olmasını istiyoruz.
+```SQL
+CREATE TABLE Employees (     ---
+    age INTEGER CHECK (age>=18)
+    ----
+);
+```
+## ALTER ve CHECK
+```SQL
+ALTER TABLE <tablo_adı> ADD CHECK (age>=18)
+```
+
+---
+
