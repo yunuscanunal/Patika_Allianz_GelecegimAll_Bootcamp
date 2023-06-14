@@ -42,6 +42,6 @@ INNER JOIN (
 	SELECT COUNT(*) AS purchase, customer_id FROM payment
 	GROUP BY customer_id
 )
-AS count_purchases ON customer.customer_id = count_purchases.customer_id
+AS count_purchases_table ON customer.customer_id = count_purchases_table.customer_id
 ORDER BY purchase DESC
 ;
