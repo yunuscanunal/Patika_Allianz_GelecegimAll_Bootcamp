@@ -39,9 +39,9 @@ WHERE (rental_rate = (
 --4
 SELECT customer.customer_id, first_name, last_name, purchase FROM customer
 INNER JOIN (
-	SELECT COUNT(*) purchase, customer_id FROM payment
+	SELECT COUNT(*) AS purchase, customer_id FROM payment
 	GROUP BY customer_id
 )
-count_purchases ON customer.customer_id = count_purchases.customer_id
+AS count_purchases ON customer.customer_id = count_purchases.customer_id
 ORDER BY purchase DESC
 ;
