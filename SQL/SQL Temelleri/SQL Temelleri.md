@@ -70,7 +70,7 @@ Bu sorgumuzda __dvdrental__ veritabanında bulunan __film__ tablosundaki __title
 ### Karşılaştırma Operatörleri
 Yukarıda da bahsettiğimiz üzere __WHERE__ anahtar kelimesi koşul ile birlikte çalışır. Aşağıda SQL ile birlikte kullanılan karşılaştırma operatörlerini görebilirsiniz.
 
-![where](../img/where-sorgu.png "where")
+![where](../../img/where-sorgu.png "where")
 
 
 ---

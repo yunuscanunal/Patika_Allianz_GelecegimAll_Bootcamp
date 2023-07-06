@@ -110,7 +110,7 @@ __PRIMARY KEY__ bir tabloda bulunan veri sıralarını birbirinden ayırmamızı
 - NULL değerine sahip olamaz.
 - Bir tabloda en fazla 1 tane bulunur.
 
-![primarykey](../img/PrimaryKey.gif "primarykey")
+![primarykey](../../img/PrimaryKey.gif "primarykey")
 
 Yukarıda bulunan görselimizde de gördüğünüz gibi STUDENT tablosunda bulunan __StudentId__ sütunu PRIMARY KEY yapısındadır ve her satırı (veri kaydını) diğer satırlardan ayırmamızı sağlar.
 
@@ -121,7 +121,7 @@ __FOREIGN KEY__ bir tabloda bulunan herhangi bir sütundaki verilerin genelde ba
 - Bir tabloda birden fazla sütun FK olarak tanımlanabilir.
 - Aynı sütunun içerisinde aynı değerler bulunabilir.
 
-![ForeignKey](../img/ForeignKey.gif "ForeignKey")
+![ForeignKey](../../img/ForeignKey.gif "ForeignKey")
 
 Yukarıda bulunan görselimizde de gördüğünüz gibi STUDENT tablosunda bulunan courseId sütunu FOREIGN KEY yapısındadır ve başka bir tablo olan "Course" tablosundaki __courseId__ sütununa referans verir.
 
@@ -140,7 +140,7 @@ Lecture 4
 
 ## Sayısal Veri Tipleri
 
-![Sayısal Veri Tipleri](../img/sayısal-veri.png "Sayısal Veri Tipleri")
+![Sayısal Veri Tipleri](../../img/sayısal-veri.png "Sayısal Veri Tipleri")
 
 ---
 
@@ -150,7 +150,7 @@ Lecture 5
 
 ## Karakter Veri Tipleri
 
-![Karakter Veri Tipleri](../img/karakter-veri.png "Karakter Veri Tipleri")
+![Karakter Veri Tipleri](../../img/karakter-veri.png "Karakter Veri Tipleri")
 
 Sınırlı sayıda karekter kullanımı için VARCHAR veya CHAR veri tipleri kullanılır. VARCHAR veri tipi doldurulmayan karakterleri yok sayar, CHAR veri tipi ise doldurulmayan karakterler için boşluk bırakır. Sınırsız karekter kullanımı için ise TEXT veri tipi kullanılır.
 
@@ -163,7 +163,7 @@ TRUE, FALSE veya NULL (Bilinmeyen) değerlerini alabilirler.
 
 ## Zaman / Tarih Veri Tipleri
 
-![Zaman / Tarih Veri Tipleri](../img/date.png "Zaman / Tarih Veri Tipleri")
+![Zaman / Tarih Veri Tipleri](../../img/date.png "Zaman / Tarih Veri Tipleri")
 
 ---
 

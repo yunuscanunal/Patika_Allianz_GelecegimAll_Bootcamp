@@ -17,7 +17,7 @@ JOIN author ON author.id = book.author_id;
 
 Yukarıdaki sorgumuzda tablolar arasındaki eşleşmeyi author.id ve book.author_id sütunları yardımıyla yapıyoruz.
 
-![Inner Join](../img/InnerJoin.png "Inner Join")
+![Inner Join](../../img/InnerJoin.png "Inner Join")
 
 Yukarıdaki görselimizde de gördüğümüz üzere INNER JOIN tablolar arasındaki eşleşen (kesişen) verileri sıralar. Bundan dolayı INNER JOIN yapısı simetriktir, author - book tablolarının yerlerinin değiştirilmesi sonucu etkilemez.
 
@@ -47,7 +47,7 @@ ON author.id = book.author_id;
 ```
 Yukarıdaki sorgumuz sonucunda göreceğimiz gibi kitapların yazar bilgisine sahip değilse NULL değerlerini alırız.
 
-![Left Join](../img/LeftJoin.png "Left Join")
+![Left Join](../../img/LeftJoin.png "Left Join")
 
 Yukarıdaki görselimizde de gördüğümüz üzere LEFT JOIN tablolar arasındaki eşleşmeyi tablo 1 (soldaki tablo) üzerinden belirlenir.
 
@@ -77,7 +77,7 @@ ON author.id = book.author_id;
 ```
 Yukarıdaki sorgumuz sonucunda göreceğimiz gibi yazarlara ait olmayan kitaplar NULL değerlerini alırız.
 
-![Right Join](../img/RightJoin.png "Right Join")
+![Right Join](../../img/RightJoin.png "Right Join")
 
 Yukarıdaki görselimizde de gördüğümüz üzere LEFT JOIN tablolar arasındaki eşleşmeyi tablo 1 (soldaki tablo) üzerinden belirlenir.
 
@@ -106,7 +106,7 @@ ON author.id = book.author_id;
 Yukarıdaki sorgumuz sonucunda göreceğimiz gibi kitapların yazar bilgisine sahip değilse NULL değerlerini alırız, yazarlar kitap bilgisine sahip değilse orada da NULL değerlerini alırız.
 
 
-![Full Join](../img/FullJoin.gif "Full Join")
+![Full Join](../../img/FullJoin.gif "Full Join")
 
 Yukarıdaki görselimizde de gördüğümüz üzere FULL JOIN tablolar arasındaki birleştirmeyi her iki tablo üzerinden belirlenir.
 

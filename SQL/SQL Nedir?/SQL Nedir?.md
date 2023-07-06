@@ -57,7 +57,7 @@ Veritabanı verilerimizi organize bir şekilde depolamımızı sağlayan yapıla
 
 Bizler SQL sorguları sayesinde veritabanımız üzerinde yapmak istediğimiz işlemler veritabanı yönetim sistemi yazılımı aracılığıyla yaparız.
 
-![DBMS](../img/DBMS.jpg "DBMS")
+![DBMS](../../img/DBMS.jpg "DBMS")
 Yukarıdaki şekilde de gördüğümüz üzere farklı kaynaklardan gelen sorgular DBMS yazılımı sayesinde farklı veritabanlarında kullanılır. Genel kullanım olarak bizler pratikte veri, veritabanı ve veritabanı yönetim sisteminin tamamını VERİTABANI olarak adlandırmak şekilde bir eğilimimiz vardır.
 
 Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur. Temel veritabanı yönetim sistemleri:
@@ -73,7 +73,7 @@ Farklı ihtiyaçlara göre çeşitli veritabanı yönetim sistemleri bulunur. Te
 
 Aşağıda popüler veritabanı yönetim sistemi yazılımlarını görebilirsiniz.
 
-![RDBMS](../img/RDBMS.png "RDBMS")
+![RDBMS](../../img/RDBMS.png "RDBMS")
 
 ---
 
