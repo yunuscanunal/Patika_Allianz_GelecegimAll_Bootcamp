@@ -9,8 +9,5 @@ public class javaNotes {
         System.out.println("Hello\tWorld");
 
         System.out.println("Hello\bWorld");
-
-
-
     }
 }
