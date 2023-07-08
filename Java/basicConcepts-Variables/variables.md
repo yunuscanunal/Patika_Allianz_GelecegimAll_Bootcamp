@@ -63,3 +63,5 @@ a = false; // a değişkeninin değeri değiştirilmiş
 
 --- 
 Lecture 2
+
+
