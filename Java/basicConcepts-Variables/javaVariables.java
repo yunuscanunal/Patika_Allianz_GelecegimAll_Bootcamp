@@ -112,11 +112,10 @@ public class javaVariables {
         System.out.println("-----");
         System.out.println(sonuc2 == sonuc3); // true
 
-        String str = sonuc ? "Doğru" : "Yanlış"; // str değişkeni: sonuc doğru ise "Doğru", yanlış ise "Yanlış" string
-        // ifadesine eşit olacaktır.
+        String str = sonuc ? "Doğru" : "Yanlış"; // if sonuc is true then str variable is equal to "Doğru"
+                                                 // if sonuc is false then str variable is equal to "Yanlış".
         System.out.println(str);
 
-    
     }
 
     public static void main(String[] args) {
