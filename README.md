@@ -23,7 +23,7 @@ This repository is including homeworks and projects given about different topics
 - [x] Frontend Web Development
 - [x] SQL
 - [x] Software, Internet, Coding and Concepts
-- [ ] Angular
+- [x] Angular
 - [ ] Object Oriented Programming
 - [ ] Java 101
 - [ ] Java 102
