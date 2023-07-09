@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class triangeAreaCalculator {
+public class triangleAreaCalculator {
     public static void main(String[] args) {
         /*
          * Homework
