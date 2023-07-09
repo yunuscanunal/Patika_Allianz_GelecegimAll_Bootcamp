@@ -9,17 +9,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        /*
-         * Kullanıcıdan veri alabilmek için Scanner sınıfından bir obje oluşturuldu.
-         * Kodumuz while döngüsü içerisinde döndüğü için istediğimiz zaman döngüyü
-         * bozabilmek adına bir boolean değişkeni
-         * tanımlandı.
-         * while döngüsü içersindeki switch caselerimizi kontrol edebilmek adına iki
-         * tane int değişkeni oluşturuldu.
-         * Kullanıcıdan veriler alarak oluşturacağımız Film objelerini depolamak için
-         * "FilmList" adında bir ArrayList oluşturuldu.
-         */
-
         Scanner input = new Scanner(System.in);
         boolean flag = true;
         int control;
@@ -27,34 +16,18 @@ public class Main {
 
         List<Film> FilmList = new ArrayList<>();
 
-        /*
-         * Kullanıcının oluşturacağı kategori ve platformları depolamak için iki tane
-         * ArrayList oluşturuldu.
-         * Aşağıda ArrayListlere girilen değerler tamamen kodun çalışabilirdiğini
-         * denerken kolaylık sağlaması adına eklenmiştir.
-         * Uygulama içerisinde zaten kullanıcıdan alınacak bilgilerle sıfırdan kategori
-         * ve platform oluşturulabilmektedir.
-         * Ekstradan aşağıda girilen verilerin bir kısmının ya da tamamının silinmesi
-         * veya veri eklenmesi uygulamanın uygun
-         * bir şekilde çalışmasını engellememektedir.
-         */
-
         ArrayList<String> platformList = new ArrayList<>();
         platformList.add("Netflix");
         platformList.add("Amazon Prime");
         platformList.add("BluTV");
         platformList.add("Disney");
-        platformList.add("IPTV");
 
         ArrayList<String> categoryList = new ArrayList<>();
-        categoryList.add("Korku");
         categoryList.add("Komedi");
         categoryList.add("Bilim Kurgu");
         categoryList.add("Romantik");
         categoryList.add("Aksiyon");
         categoryList.add("Macera");
-        categoryList.add("Dram");
-        categoryList.add("Çocuk");
 
         do {
 
@@ -71,10 +44,6 @@ public class Main {
                     switch (controlAdmin) {
 
                         case 1:
-                            /*
-                             * Bu kısımında kullanıcı verileri ile yukarıdaki kategori listesine
-                             * yeni kategori eklenebilmektedir.
-                             */
 
                             input.nextLine();
                             System.out.println("Eklenecek Kategorinin Adını Giriniz: ");
@@ -84,10 +53,6 @@ public class Main {
                             break;
 
                         case 2:
-                            /*
-                             * Bu kısımında kullanıcı verileri ile yukarıdaki platform listesine
-                             * yeni platform eklenebilmektedir.
-                             */
 
                             input.nextLine();
                             System.out.println("Eklenecek Platformun Adını Giriniz: ");
