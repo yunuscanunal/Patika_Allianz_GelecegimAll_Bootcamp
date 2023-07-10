@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class EvenNumberFinder {
+    /*
+     * We write a program that finds even numbers up to the number entered by the
+     * user with Java loops.
+     */
     public static void main(String[] args) {
         int k;
 
