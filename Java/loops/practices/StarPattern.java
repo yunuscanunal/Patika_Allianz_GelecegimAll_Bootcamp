@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class StarPattern {
     public static void main(String[] args) {
-        // *
-        // ***
-        // *****
-        // *******
-        // *********
+        //      *
+        //     ***
+        //    *****
+        //   *******
+        //  *********
         // ***********
         Scanner klavye = new Scanner(System.in);
         System.out.print("Bir Sayı Giriniz :");
