@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class ReverseTrianglePattern {
     public static void main(String[] args) {
         // ***********
-        // *********
-        // *******
-        // *****
-        // ***
-        // *
+        //  *********
+        //   *******
+        //    *****
+        //     ***
+        //      *
         Scanner klavye = new Scanner(System.in);
         System.out.print("Bir Sayı Giriniz :");
         int n = klavye.nextInt();
