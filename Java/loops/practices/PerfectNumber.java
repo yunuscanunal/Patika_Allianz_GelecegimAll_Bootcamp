@@ -1,4 +1,4 @@
-package Java.Methods.practices;
+package Java.loops.practices;
 
 import java.util.Scanner;
 
