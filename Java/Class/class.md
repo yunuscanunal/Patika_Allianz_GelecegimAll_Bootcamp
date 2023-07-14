@@ -117,7 +117,7 @@ public class Main {
 }
 ```
 Programın çıktısı :
-```java
+```
 Audi Hızı : 10
 Bmw Hızı : 25
 Mercedes Hızı : 30
@@ -147,7 +147,7 @@ public class Main {
 }
 ```
 Programın çıktısı :
-```java
+```
 Speed : 30
 Speed : 15
 Speed : 20
@@ -232,7 +232,7 @@ public class Main {
 }
 ```
 Programın çıktısı :
-```java
+```
 ================
 Model  : Audi
 Color  : red
