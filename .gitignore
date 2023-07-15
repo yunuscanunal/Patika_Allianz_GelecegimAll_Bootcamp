@@ -1,6 +1,6 @@
 .DS_Store
 tmp/
-Angular/
+
 
 #ignore all txt files
 *.txt
