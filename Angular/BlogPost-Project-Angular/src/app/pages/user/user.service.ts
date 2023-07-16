@@ -7,8 +7,6 @@ import { dataUsers } from '../../../assets/data/dataUsers'; //data
 })
 export class UserService {
 
-
-
     private users: User[] = []
     constructor() { }
     getUsers(): User[] {
@@ -17,7 +15,6 @@ export class UserService {
     setUsers(): void {
         this.users = dataUsers;
     }
-
 
     deleteUser(id: number): void {
         this.users = this.users.filter((user) => user.userId !== id);
@@ -37,7 +34,6 @@ export class UserService {
 
     userCount(): number {
         return this.users.length;
-
     }
 
     editUser(editedUser: User, id: number): void {
@@ -62,6 +58,4 @@ export class UserService {
         else
             return true;
     }
-
-
 }
