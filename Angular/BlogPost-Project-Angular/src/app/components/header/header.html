@@ -1,8 +1,15 @@
-<header class="flex justify-center items-center m-3 p-1 bg-white rounded">
-    <app-button text="Main Page" textColor="text-white" bgColor="bg-cyan-950" [routerLink]="['']"></app-button>
-    <app-button text="Users" textColor="text-white" bgColor="bg-cyan-950" [routerLink]="['users']"></app-button>
-    <app-button text="Categories" textColor="text-white" bgColor="bg-cyan-950"
-        [routerLink]="['categories']"></app-button>
-    <app-button text="Posts" textColor="text-white" bgColor="bg-cyan-950" [routerLink]="['posts']"></app-button>
-    <app-button text="Comments" textColor="text-white" bgColor="bg-cyan-950" [routerLink]="['comments']"></app-button>
-</header>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<div class="container-fluid p-0 header m-0">
+    <nav class="navbar navbar-dark px-4 py-0 ">
+        <div class="container-fluid d-flex justify-content-between align-items-center header-container">
+            <a (click)="newMessage()" class="lg-dark-bg">
+                <i class='bx bx-menu border rounded'></i>
+            </a>
+            <p class="fs-3 fw-semibold " id="navbar-text">hBurak Media / Admin Panel</p>
+            <a (click)="navigateToGitHub()" class="lg-dark-bg d-flex justify-content-center align-items-center gap-2">
+                <i class="devicon-github-original"></i>
+            </a>
+        </div>
+    </nav>
+</div>
