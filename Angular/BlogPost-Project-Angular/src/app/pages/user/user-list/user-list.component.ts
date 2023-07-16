@@ -4,7 +4,6 @@ import { User } from '../user';
 import { PostService } from '../../post/post.service';
 import { CommentService } from '../../comment/comment.service';
 
-
 @Component({
     selector: 'app-user-list',
     templateUrl: './user-list.component.html',
@@ -52,7 +51,6 @@ export class UserListComponent {
         else
             return false;
     }
-
 
     handleSaveClick() {
         if (this.username == '' || this.email == '' || this.creationDate == '')
