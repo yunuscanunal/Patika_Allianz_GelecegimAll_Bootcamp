@@ -13,7 +13,7 @@ public class PaymentMovementService {
     private MovementType movementType;
     private BigDecimal amount;
      */
-    public PaymentMovementService createPaymentMovement(Agency agency, BankAccount bankAccount, String description,
+    public PaymentMovementService createPaymentMovement(BankAccount bankAccount, String description,
                                                         MovementType movementType, BigDecimal amount) {
         PaymentMovementService paymentMovement = new PaymentMovementService();
         //paymentMovement.

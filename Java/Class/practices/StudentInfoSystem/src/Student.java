@@ -31,8 +31,12 @@ public class Student {
         }
     }
 
+    void average(){
+        this.average = average;
+        average = (this.c1.note + this.c2.note + this.c3.note) / 3.0;
+    }
     void isPassed() {
-        this.average = (this.c1.note + this.c2.note + this.c3.note) / 3.0;
+        average();
         if (this.average > 55) {
             System.out.println("Geçtiniz.");
             this.isPassed = true;
