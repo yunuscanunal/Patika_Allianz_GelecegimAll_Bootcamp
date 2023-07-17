@@ -1,2 +1,4 @@
-package service;public class InsuranceCompanyService {
+package service;
+
+public class InsuranceCompanyService {
 }

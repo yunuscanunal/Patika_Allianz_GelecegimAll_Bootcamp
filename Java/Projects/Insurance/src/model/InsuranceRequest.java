@@ -12,6 +12,9 @@ public class InsuranceRequest {
         this.policy = policy;
     }
 
+    public InsuranceRequest() {
+    }
+
     public ArrayList<Proposal> getProposalList() {
         return proposalList;
     }
@@ -34,5 +37,14 @@ public class InsuranceRequest {
 
     public void setPolicy(Policy policy) {
         this.policy = policy;
+    }
+
+    @Override
+    public String toString() {
+        return "InsuranceRequest{" +
+                "proposalList=" + proposalList +
+                ", vehicle=" + vehicle +
+                ", policy=" + policy +
+                '}';
     }
 }

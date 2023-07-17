@@ -79,4 +79,18 @@ public class Proposal {
     public void setDiscountPrice(BigDecimal discountPrice) {
         this.discountPrice = discountPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Proposal{" +
+                "company=" + company +
+                ", vehicle=" + vehicle +
+                ", offerPrice=" + offerPrice +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", expireDate=" + expireDate +
+                ", isApproved=" + isApproved +
+                ", discountPrice=" + discountPrice +
+                '}';
+    }
 }

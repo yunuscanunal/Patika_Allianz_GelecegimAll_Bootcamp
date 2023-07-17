@@ -11,6 +11,9 @@ public class Vehicle {
     private ArrayList<Accident> accidentList;
     private ColorTypeEnum color;
 
+    public Vehicle() {
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -65,5 +68,18 @@ public class Vehicle {
 
     public void setColor(ColorTypeEnum color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", plate='" + plate + '\'' +
+                ", chassisNumber='" + chassisNumber + '\'' +
+                ", modelYear=" + modelYear +
+                ", accidentList=" + accidentList +
+                ", color=" + color +
+                '}';
     }
 }

@@ -9,6 +9,9 @@ public class Insurance {
         this.name = name;
     }
 
+    public Insurance() {
+    }
+
     public InsuranceTypeEnum getInsuranceTypeEnum() {
         return insuranceTypeEnum;
     }
@@ -23,5 +26,13 @@ public class Insurance {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Insurance{" +
+                "insuranceTypeEnum=" + insuranceTypeEnum +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

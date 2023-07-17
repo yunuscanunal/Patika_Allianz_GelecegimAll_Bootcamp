@@ -18,6 +18,9 @@ public class Policy {
         this.endDate = endDate;
     }
 
+    public Policy() {
+    }
+
     public InsuranceCompany getInsuranceCompany() {
         return insuranceCompany;
     }
@@ -56,5 +59,16 @@ public class Policy {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Policy{" +
+                "insuranceCompany=" + insuranceCompany +
+                ", vehicle=" + vehicle +
+                ", price=" + price +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                '}';
     }
 }

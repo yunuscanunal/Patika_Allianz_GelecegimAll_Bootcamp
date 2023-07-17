@@ -16,6 +16,9 @@ public class Accident {
         this.failureRate = failureRate;
     }
 
+    public Accident() {
+    }
+
     public Date getAccidentDate() {
         return accidentDate;
     }
@@ -46,5 +49,15 @@ public class Accident {
 
     public void setFailureRate(int failureRate) {
         this.failureRate = failureRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Accident{" +
+                "accidentDate=" + accidentDate +
+                ", description='" + description + '\'' +
+                ", damagePrice=" + damagePrice +
+                ", failureRate=" + failureRate +
+                '}';
     }
 }

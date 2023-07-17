@@ -12,7 +12,11 @@ public class Agency {
     public Agency(String name) {
         this.name = name;
     }
-    public Agency(){};
+
+    public Agency() {
+    }
+
+    ;
 
     public String getName() {
         return name;

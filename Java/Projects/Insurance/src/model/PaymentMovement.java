@@ -9,6 +9,8 @@ public class PaymentMovement {
     private MovementType movementType;
     private BigDecimal amount;
 
+    public PaymentMovement() {
+    }
 
     public BankAccount getBankAccount() {
         return bankAccount;
@@ -42,5 +44,13 @@ public class PaymentMovement {
         this.amount = amount;
     }
 
-
+    @Override
+    public String toString() {
+        return "PaymentMovement{" +
+                "bankAccount=" + bankAccount +
+                ", description='" + description + '\'' +
+                ", movementType=" + movementType +
+                ", amount=" + amount +
+                '}';
+    }
 }
