@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Comment } from './comment';
-import { dataComments } from 'src/assets/data/dataComments';
+import { dataComments } from '../../../assets/data/dataComments';
+
 
 @Injectable({
     providedIn: 'root'
@@ -8,7 +9,6 @@ import { dataComments } from 'src/assets/data/dataComments';
 export class CommentService {
     private comments: Comment[] = [];
     constructor() { }
-
     getComments(): Comment[] {
         return this.comments;
     }
@@ -17,8 +17,12 @@ export class CommentService {
         this.comments = dataComments;
     }
 
-    deleteComment($event: number) {
-        this.comments = this.comments.filter((comment) => comment.commentId !== $event);
+    deleteComment(id: number) {
+        this.comments = this.comments.filter((comment) => comment.commentId !== id);
+    }
+
+    findCommentById(id: Number): Comment | undefined {
+        return this.comments.find((comment) => comment.commentId === Number(id));
     }
 
     addComment(comment: Comment) {

@@ -7,7 +7,7 @@ import { dataUsers } from '../../../assets/data/dataUsers'; //data
 })
 export class UserService {
 
-    private users: User[] = []
+    private users: User[] = [];
     constructor() { }
     getUsers(): User[] {
         return this.users;
@@ -47,7 +47,6 @@ export class UserService {
         this.users.push(user);
     }
 
-    //username ve email unique 
     checkUnique(username: string, email: string, id: number): boolean {
         if (this.users.find((user) => user.username === username.toLowerCase()) !== undefined
             && this.findUserByUsername(username.toLowerCase())!.userId !== id)

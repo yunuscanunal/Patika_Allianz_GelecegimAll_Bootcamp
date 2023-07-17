@@ -7,17 +7,13 @@ import { dataPosts } from '../../../assets/data/dataPosts'; //data
 })
 export class PostService {
     private posts: Post[] = [];
-
     constructor() { }
-
     getPosts(): Post[] {
         return this.posts;
     }
-
     setPosts(): void {
         this.posts = dataPosts;
     }
-
     deletePost(id: number): void {
         this.posts = this.posts.filter((post) => post.postId !== id);
     }
