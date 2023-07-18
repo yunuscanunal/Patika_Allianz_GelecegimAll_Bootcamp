@@ -5,10 +5,10 @@ import model.*;
 import java.util.ArrayList;
 
 public class InsuranceRequestService {
-    public InsuranceRequest createInsuranceRequest(Agency agency, Vehicle vehicle, Policy policy) {
+    public InsuranceRequest createInsuranceRequest(Vehicle vehicle) {
         InsuranceRequest insuranceRequest = new InsuranceRequest();
         insuranceRequest.setVehicle(vehicle);
-        insuranceRequest.setPolicy(policy);
+        //insuranceRequest.setPolicy(policy);
         return insuranceRequest;
     }
 

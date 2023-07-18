@@ -6,7 +6,7 @@ import model.Vehicle;
 
 import java.util.ArrayList;
 
-public class VehicleClass {
+public class VehicleService {
     public Vehicle createVehicle (String brand, String model, String plate, String chassisNumber,
                                   int modelYear, ColorTypeEnum color){
         Vehicle vehicle = new Vehicle();

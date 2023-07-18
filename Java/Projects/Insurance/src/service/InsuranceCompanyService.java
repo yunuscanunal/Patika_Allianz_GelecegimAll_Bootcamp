@@ -50,4 +50,5 @@ public class InsuranceCompanyService {
             insuranceCompany.setPaymentMovementList(paymentMovementList);
         }
     }
+
 }
