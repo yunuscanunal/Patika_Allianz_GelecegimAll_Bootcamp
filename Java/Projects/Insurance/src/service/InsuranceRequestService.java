@@ -22,4 +22,7 @@ public class InsuranceRequestService {
             insuranceRequest.setProposalList(proposalList);
         }
     }
+    public void setPolicyToInsuranceRequest(InsuranceRequest insuranceRequest, Policy policy) {
+        insuranceRequest.setPolicy(policy);
+    }
 }

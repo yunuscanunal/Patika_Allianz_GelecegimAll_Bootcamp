@@ -6,6 +6,8 @@ public class InsuranceRequest {
     private ArrayList<Proposal> proposalList;
     private Vehicle vehicle;
     private Policy policy;
+    private InsuranceTypeEnum insuranceTypeEnum;
+
 
     public InsuranceRequest(Vehicle vehicle, Policy policy) {
         this.vehicle = vehicle;
@@ -37,6 +39,14 @@ public class InsuranceRequest {
 
     public void setPolicy(Policy policy) {
         this.policy = policy;
+    }
+
+    public InsuranceTypeEnum getInsuranceTypeEnum() {
+        return insuranceTypeEnum;
+    }
+
+    public void setInsuranceTypeEnum(InsuranceTypeEnum insuranceTypeEnum) {
+        this.insuranceTypeEnum = insuranceTypeEnum;
     }
 
     @Override

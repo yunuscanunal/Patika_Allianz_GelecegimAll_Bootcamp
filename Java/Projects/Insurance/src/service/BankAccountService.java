@@ -13,13 +13,4 @@ public class BankAccountService {
         bankAccount.setAmount(amount);
         return bankAccount;
     }
-
-    public BankAccount getBankAccountWithEnoughMoney(Agency agency, BigDecimal amount) {
-        for (BankAccount bankAccount : agency.getBankAccountList()) {
-            if (bankAccount.getAmount().compareTo(amount) >= 0) {
-                return bankAccount;
-            }
-        }
-        return null;
-    }
 }

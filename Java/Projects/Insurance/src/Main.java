@@ -4,54 +4,85 @@ import service.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Date;
 
 public class Main {
-
     public static void main(String[] args) {
-
         AgencyService agencyService = new AgencyService();
-        Agency agency = agencyService.createAgency("MOM");
-        System.out.println(agency.toString());
-
         BankAccountService bankAccountService = new BankAccountService();
-        BankAccount bankAccount = bankAccountService.createBankAccount("Ziraat Bankasi", "TR20300000048476353", BigDecimal.ZERO);
-
-        agencyService.addBankAccountToAgency(agency, bankAccount);
-        System.out.println(agency.toString());
-
         InsuranceCompanyService insuranceCompanyService = new InsuranceCompanyService();
-        InsuranceCompany insuranceCompany = insuranceCompanyService.createInsuranceCompany("Allianz", "727384849",
-                "Ankara", "Ankara/ Cankaya", new BigDecimal(8));
-
         InsuranceService insuranceService = new InsuranceService();
-        Insurance insurance = insuranceService.createInsurance(
-                InsuranceTypeEnum.COMPULSORY_TRAFFIC_INSURANCE, "compulsory traffic insurance");
-        insuranceCompanyService.addInsuranceToCompany(insuranceCompany, insurance);
-        BankAccount allianzBankAccount = bankAccountService.createBankAccount("Yapi Kredi Bankasi", "TR20300000048476353", new BigDecimal(1000000));
-        insuranceCompanyService.addBankAccountToCompany(insuranceCompany, allianzBankAccount);
-
         CustomerService customerService = new CustomerService();
-        Customer customer = customerService.createCustomer("Sinem", CustomerTypeEnum.CORPORATE);
-
-        BankAccount customerBankAccount = bankAccountService.createBankAccount("Is Bankasi",
-                "TR139128309183907", new BigDecimal(10000));
-
-        customerService.addBankAccountToCustomer(customer, customerBankAccount);
-        agencyService.addInsuranceCompanyToAgency(agency, insuranceCompany);
-        agencyService.addCustomerToAgency(agency, customer);
-
+        PolicyService policyService = new PolicyService();
         VehicleService vehicleService = new VehicleService();
-        Vehicle vehicle = vehicleService.createVehicle("Ford", "Focus",
-                "34cd474", "1231", 2010, ColorTypeEnum.BLACK);
-
-        customerService.addVehicleToCustomer(customer, vehicle);
-        System.out.println(customer);
-
         InsuranceRequestService insuranceRequestService = new InsuranceRequestService();
+        ProposalService proposalService = new ProposalService();
+        AccidentService accidentService = new AccidentService();
+
+        BankAccount customerBankAccount = bankAccountService.createBankAccount("Ziraat", "TR7364872374983",
+                new BigDecimal(10000));
+        BankAccount agencyBankAccount = bankAccountService.createBankAccount("Yapı Kredi", "TR48777433",
+                new BigDecimal(12000));
+        BankAccount insuranceCompanyBankAccount = bankAccountService.createBankAccount("Yapı Kredi", "TR490680595",
+                new BigDecimal(20000));
+
+        Agency agency = agencyService.createAgency("Aaaa");
+
+        Insurance insurance = insuranceService.createInsurance(InsuranceTypeEnum.COMPULSORY_TRAFFIC_INSURANCE,
+                "Traffic Insurance");
+        InsuranceCompany insuranceCompany = insuranceCompanyService.createInsuranceCompany("Allianz Sigorta",
+                "23245435", "XX", "Ataşehir/İstanbul", new BigDecimal("0.10"));
+
+        Customer customer = customerService.createCustomer("Egemen Kaya", CustomerTypeEnum.INDIVIDUAL);
+
+
+        Vehicle vehicle = vehicleService.createVehicle("Sedan", "14 ABC 123", "XYZ123456789",
+                "Toyota", 2022, ColorTypeEnum.BLACK);
+
+        LocalDate startDate = LocalDate.of(2023, Month.JULY, 1);
+        LocalDate endDate = LocalDate.of(2024, Month.JULY, 1);
+        Policy policy = policyService.createPolicy(insuranceCompany, vehicle, new BigDecimal(900000),
+                java.sql.Date.valueOf(startDate), java.sql.Date.valueOf(endDate));
+
         InsuranceRequest insuranceRequest = insuranceRequestService.createInsuranceRequest(vehicle);
 
+        LocalDate startDate1 = LocalDate.of(2023, Month.JULY, 1);
+        LocalDate endDate1 = LocalDate.of(2024, Month.JULY, 1);
+        LocalDate expireDate = startDate.plusDays(3);
+        Proposal proposal = proposalService.createProposal(insuranceCompany, vehicle, new BigDecimal(1200),
+                java.sql.Date.valueOf(startDate1), java.sql.Date.valueOf(endDate1), java.sql.Date.valueOf(expireDate),
+                true, new BigDecimal(100));
+
+        insuranceRequestService.addProposalToInsuranceRequest(insuranceRequest, proposal);
+
+
+        //vehicleService.addAccidentToVehicle(accident, vehicle);
+
+        LocalDate accidentDate = LocalDate.now();
+        Accident accident = accidentService.createAccident(accidentDate, "Trafik kazası gerçekleşti.", new BigDecimal(5000),
+                6);
+
+        vehicleService.addAccidentToVehicle(vehicle, accident);
+
+
+        insuranceCompanyService.addInsuranceToCompany(insuranceCompany, insurance);
+        insuranceCompanyService.addBankAccountToCompany(insuranceCompany, insuranceCompanyBankAccount);
+
+        agencyService.addInsuranceCompanyToAgency(agency, insuranceCompany);
+        agencyService.addBankAccountToAgency(agency, agencyBankAccount);
+        agencyService.addCustomerToAgency(customer, agency);
+
+        customerService.addVehicleToCustomer(customer, vehicle);
+        customerService.addBankAccountToCustomer(customer, customerBankAccount);
+        customerService.addPolicyToCustomer(customer, policy);
         customerService.addInsuranceRequestToCustomer(customer, insuranceRequest);
-        LocalDate startDate = LocalDate.of(2010, Month.APRIL, 15);
-        LocalDate endDate = LocalDate.of(2011, Month.APRIL, 15);
+
+        customerService.acceptProposal(customer, proposal, insuranceRequest, agency, insuranceCompany);
+
+        System.out.println(proposal.getOfferPrice());
+        System.out.println(vehicle.getAccidentList());
+        System.out.println(accident.getDamagePrice());
+        //System.out.println(agency.toString());
+
     }
 }

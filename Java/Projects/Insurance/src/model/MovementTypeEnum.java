@@ -1,5 +1,5 @@
 package model;
 
-public enum MovementType {
+public enum MovementTypeEnum {
     INCOME, OUTCOME;
 }
