@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class groceryCashCalculator {
+public class GroceryCashCalculator {
     public static void main(String[] args) {
         /*
          * Grocery Cashier Program

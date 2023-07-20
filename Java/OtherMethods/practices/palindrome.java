@@ -1,4 +1,4 @@
-public class palindrome {
+public class Palindrome {
 
     static boolean isPalindrome(String str) {
         int i = 0, j = str.length() - 1;

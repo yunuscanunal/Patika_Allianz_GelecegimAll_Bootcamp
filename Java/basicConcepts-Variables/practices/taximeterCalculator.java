@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class taximeterCalculator {
+public class TaximeterCalculator {
     public static void main(String[] args) {
         /*
          * Taximeter Program

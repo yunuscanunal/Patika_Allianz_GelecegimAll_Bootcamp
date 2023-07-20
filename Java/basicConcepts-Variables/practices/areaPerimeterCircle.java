@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class areaPerimeterCircle {
+public class AreaPerimeterCircle {
     public static void main(String[] args) {
         /*
          * Program to Calculate Area and Perimeter of a Circle

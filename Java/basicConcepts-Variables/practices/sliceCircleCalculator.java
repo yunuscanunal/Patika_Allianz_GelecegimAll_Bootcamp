@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class sliceCircleCalculator {
+public class SliceCircleCalculator {
     public static void main(String[] args) {
         /*
          * Homework
