@@ -18,3 +18,6 @@ Eğer yazdığımız kodlarda herhangi bir öğenin önüne erişim düzenleyici
 ## Tüm kullanım şekilleri
 
 ![Access Modifiers](../../img/accessModifiers.jpeg "Access Modifiers")
+
+---
+Lecture 2
