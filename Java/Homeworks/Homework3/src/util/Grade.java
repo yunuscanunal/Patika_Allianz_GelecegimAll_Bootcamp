@@ -3,8 +3,9 @@ package util;
 public enum Grade {
     A("A", 4), B("B", 3), C("C", 2), D("D", 1), F("F", 0);
 
-    int numericValue;
-    String stringValue;
+    private final int numericValue;
+    private final String stringValue;
+
     private Grade(String stringValue, int numericValue) {
         this.stringValue = stringValue;
         this.numericValue = numericValue;
@@ -21,8 +22,9 @@ public enum Grade {
     @Override
     public String toString() {
         return "Grade{" +
-                "numericValue=" + numericValue +
-                ", stringValue='" + stringValue + '\'' +
+                this.stringValue +
+                " corresponds to numeric grade " +
+                this.numericValue + '.' +
                 '}';
     }
 }
