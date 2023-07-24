@@ -1,17 +1,24 @@
+import main.CourseGrade;
+import main.Transcript;
+import util.Grade;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CourseGrade course1 = new CourseGrade("CENG", 201, 4, Grade.D);
+        CourseGrade course2 = new CourseGrade("MATH", 601, 4, Grade.A); // Varsayılan courseCode atanır.
+        CourseGrade course3 = new CourseGrade("ME", 201, 5, Grade.C);
+        CourseGrade course4 = new CourseGrade("ECE", 201, 3, Grade.F);
+        CourseGrade course5 = new CourseGrade("CENG", 101, 4, Grade.B);
 
-        // Press Ctrl+F5 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Transcript transcript = new Transcript(1112234);
+        transcript.addTakenCourse(course1);
+        transcript.addTakenCourse(course2);
+        transcript.addTakenCourse(course3);
+        transcript.addTakenCourse(course4);
+        transcript.addTakenCourse(course5);
 
-            // Press Opt+F5 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing F9.
-            System.out.println("i = " + i);
-        }
+        System.out.print(transcript);
     }
 }
