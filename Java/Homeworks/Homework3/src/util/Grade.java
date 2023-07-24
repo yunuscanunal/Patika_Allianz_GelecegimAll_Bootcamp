@@ -1,2 +1,4 @@
-package util;public enum Grade {
+package util;
+
+public enum Grade {
 }
