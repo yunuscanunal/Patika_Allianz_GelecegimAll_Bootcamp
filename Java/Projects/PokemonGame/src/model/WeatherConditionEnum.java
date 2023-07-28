@@ -2,8 +2,9 @@ package model;
 
 public enum WeatherConditionEnum {
     SUNNY,
+    HOT,
     CLOUDY,
-    RAIN,
+    RAINY,
     THUNDER,
-    SNOW
+    SNOWY;
 }
