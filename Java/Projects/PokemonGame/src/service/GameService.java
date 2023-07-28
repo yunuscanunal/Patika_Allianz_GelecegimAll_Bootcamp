@@ -2,8 +2,15 @@ package service;
 
 import model.Player;
 import model.Pokemon;
+import model.WeatherConditionEnum;
+
+import java.util.ArrayList;
 
 public class GameService {
+
+    LoadService loadService = new LoadService();
+    ArrayList<Pokemon> pokemonList = loadService.loadPokemons();
+    WeatherService weatherService = new WeatherService();
 
     public void attack(Player attacker, Player defender, boolean isPokeSpecialAttack, boolean isCharSpecialAttack) {
         Pokemon attackingPokemon = attacker.getCharacter().getPokemonList().get(0);
@@ -20,8 +27,9 @@ public class GameService {
         }
 
         int charRemainingRights = attacker.getCharacter().getSpecialPower().getRemainingRights();
+        WeatherConditionEnum randomWeatherCondition = weatherService.randomWeather();
+        int damage = weatherService.weatherEffectToTheDamageOfPokemon(attackingPokemon, randomWeatherCondition);
 
-        int damage = 0;
         if (specialAttack) {
             if (isPokeSpecialAttack && isCharSpecialAttack) {
                 damage += attackingPokemon.specialAttack();
@@ -64,6 +72,21 @@ public class GameService {
                     player.getCharacter().getPokemonList().get(0).getName() +
                     " oyunu kaybetti.");
             return false;
+        }
+    }
+
+    public void winnerPlayerFinder(Player player1, Player player2) {
+        if (player1.getCharacter().getPokemonList().get(0).getHealth() <= 0){
+
+            player2.getCharacter().getPokemonList().add(player1.getCharacter().getPokemonList().get(0));
+            player2.getCharacter().getPokemonList().get(1).setHealth(100);
+
+            player1.getCharacter().getPokemonList().remove(0);
+        }else {
+            player1.getCharacter().getPokemonList().add(player2.getCharacter().getPokemonList().get(0));
+            player1.getCharacter().getPokemonList().get(1).setHealth(100);
+
+            player2.getCharacter().getPokemonList().remove(0);
         }
     }
 }
