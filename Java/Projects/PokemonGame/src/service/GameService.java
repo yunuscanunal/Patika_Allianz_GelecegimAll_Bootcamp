@@ -1,6 +1,5 @@
 package service;
 
-import model.Character;
 import model.Player;
 import model.Pokemon;
 
@@ -37,23 +36,33 @@ public class GameService {
             }
         } else {
             if (isPokeSpecialAttack || isCharSpecialAttack) {
-                damage = 0;
+                System.out.println(attacker.getName() + "'s " + attackingPokemon.getName() + " hit " + 0);
             } else {
                 damage += attackingPokemon.getDamage();
+                System.out.println(attacker.getName() + "'s " + attackingPokemon.getName() + " hit " + damage);
             }
         }
         defendingPokemon.setHealth(defendingPokemon.getHealth() - damage);
+        System.out.println(defender.getName() + "'s " +
+                defendingPokemon.getName() +
+                " health is " +
+                defendingPokemon.getHealth());
     }
 
-    public boolean healthCheck(Player player){
-        if(player.getCharacter().getPokemonList().get(0).getHealth() > 0){
+    public boolean healthCheck(Player player) {
+
+        if (player.getCharacter().getPokemonList().get(0).getHealth() > 0) {
             System.out.println(player.toString());
             System.out.println("Oyun devam ediyor.");
+
             return true;
 
         } else {
             System.out.println(player.toString());
-            System.out.println(player.getName() + " oyunu kaybetti");
+            System.out.println(player.getName() +
+                    "'s " +
+                    player.getCharacter().getPokemonList().get(0).getName() +
+                    " oyunu kaybetti.");
             return false;
         }
     }
