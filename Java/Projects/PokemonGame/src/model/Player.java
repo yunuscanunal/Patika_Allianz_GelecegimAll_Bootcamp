@@ -11,6 +11,9 @@ public class Player {
         this.character = character;
         this.isWinner = false;
     }
+    public Player() {
+    }
+
 
     public String getName() {
         return name;
