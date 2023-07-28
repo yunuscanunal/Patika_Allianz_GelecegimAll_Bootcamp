@@ -1,12 +1,12 @@
 package service;
 
-import model.*;
 import model.Character;
+import model.*;
 
 import java.util.ArrayList;
 
 public class LoadService {
-    public ArrayList<Character> loadCharacters(){
+    public ArrayList<Character> loadCharacters() {
         SpecialPower strategy1 = new Strategy("Strategy", 4, 1);
         SpecialPower strategy2 = new Strategy("Strategy II", 3, 1);
 
@@ -19,7 +19,7 @@ public class LoadService {
         return characterList;
     }
 
-    public ArrayList<Pokemon> loadPokemons(){
+    public ArrayList<Pokemon> loadPokemons() {
         SpecialPower electricity = new Electricity("Electricity", 3, 3);
         SpecialPower water = new Water("Water", 1, 3);
         SpecialPower fire = new Fire("Fire", 5, 3);
