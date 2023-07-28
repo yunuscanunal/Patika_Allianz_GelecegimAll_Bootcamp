@@ -1,7 +1,7 @@
 package model;
 
 public enum TypeEnum {
-    FIRE, WATER, GRASS, ELECTRICY, WING, EARTH;
+    FIRE, WATER, GRASS, ELECTRICITY, WING, EARTH;
 
 
 }

@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Player {
     private String name;
     private Character character;
@@ -11,6 +9,7 @@ public class Player {
     public Player(String name, Character character) {
         this.name = name;
         this.character = character;
+        this.isWinner = false;
     }
 
     public String getName() {

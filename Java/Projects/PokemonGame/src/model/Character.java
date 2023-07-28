@@ -13,7 +13,7 @@ public class Character {
         this.pokemonList = pokemonList;
     }
 
-    public Character(String name, SpecialPower specialPower){
+    public Character(String name, SpecialPower specialPower) {
         this.name = name;
         this.specialPower = specialPower;
         this.pokemonList = new ArrayList<>();
@@ -42,7 +42,6 @@ public class Character {
     public void setPokemonList(ArrayList<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
     }
-
 
     @Override
     public String toString() {

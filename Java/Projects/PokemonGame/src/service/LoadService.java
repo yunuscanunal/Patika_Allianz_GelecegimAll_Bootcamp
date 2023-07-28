@@ -20,12 +20,12 @@ public class LoadService {
     }
 
     public ArrayList<Pokemon> loadPokemons(){
-        SpecialPower electricty = new Electricty("Electricty", 3, 3);
+        SpecialPower electricity = new Electricity("Electricity", 3, 3);
         SpecialPower water = new Water("Water", 1, 3);
         SpecialPower fire = new Fire("Fire", 5, 3);
         SpecialPower earth = new Earth("Earth", 4, 3);
 
-        Pokemon pokemon1 = new Pikachu("Pikachu", 100, 10, TypeEnum.ELECTRICY, electricty);
+        Pokemon pokemon1 = new Pikachu("Pikachu", 100, 10, TypeEnum.ELECTRICITY, electricity);
         Pokemon pokemon2 = new Sqiurtle("Squirtle", 15, 8, TypeEnum.WATER, water);
         Pokemon pokemon3 = new Charmander("Charmender", 90, 12, TypeEnum.FIRE, fire);
         Pokemon pokemon4 = new Balbausar("Balbausar", 140, 7, TypeEnum.EARTH, earth);
