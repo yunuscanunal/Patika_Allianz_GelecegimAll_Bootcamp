@@ -4,14 +4,26 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class Transcript {
+    private ArrayList<CourseGrade> courseGradeArrayList;
     private int studentId;
-    private final ArrayList<CourseGrade> courseGradeArrayList;
     private double GPA;
 
     public Transcript(int StudentId) {
         this.studentId = StudentId;
         this.GPA = 0.0;
         this.courseGradeArrayList = new ArrayList<>();
+    }
+
+    public Transcript(){
+
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
     public void addTakenCourse(CourseGrade courseGrade) {

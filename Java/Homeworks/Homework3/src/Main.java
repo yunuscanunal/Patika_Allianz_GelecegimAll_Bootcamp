@@ -1,11 +1,18 @@
 import main.CourseGrade;
+import main.GenerateTranscript;
 import main.Transcript;
 import util.Grade;
+import util.GradeTest;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+
+        GenerateTranscript generateTranscript = new GenerateTranscript();
+        GradeTest gradeValue = new GradeTest();
+        gradeValue.value();
+
         CourseGrade course1 = new CourseGrade("CENG", 201, 4, Grade.D);
         CourseGrade course2 = new CourseGrade("MATH", 601, 4, Grade.A); // Varsayılan courseCode atanır.
         CourseGrade course3 = new CourseGrade("ME", 201, 5, Grade.C);
@@ -20,5 +27,6 @@ public class Main {
         transcript.addTakenCourse(course5);
 
         System.out.print(transcript);
+        generateTranscript.takeInputFromFile();
     }
 }
