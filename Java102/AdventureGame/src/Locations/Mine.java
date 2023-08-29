@@ -1,6 +1,6 @@
 package Locations;
-import obstacle.*;
-import player.*;
+import Obstacles.*;
+import Players.*;
 
 public class Mine extends BattleLocation{
     public Mine(Player player) {

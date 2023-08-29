@@ -1,6 +1,6 @@
 package Players;
 
-import locations.*;
+import Locations.*;
 
 import java.util.Scanner;
 

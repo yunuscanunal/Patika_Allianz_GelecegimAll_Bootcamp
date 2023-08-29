@@ -1,8 +1,8 @@
 package Locations;
-import items.StoreItems;
-import items.*;
-import obstacle.*;
-import player.*;
+import Items.StoreItems;
+import Items.*;
+import Obstacles.*;
+import Players.*;
 import java.util.Random;
 
 public abstract class BattleLocation extends Location {

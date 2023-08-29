@@ -1,5 +1,5 @@
 package Locations;
-import player.*;
+import Players.*;
 
 public abstract class NormalLocation extends Location {
     public NormalLocation(Player player, String name, int id){

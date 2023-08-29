@@ -1,6 +1,6 @@
 package Locations;
-import player.*;
-import obstacle.*;
+import Players.*;
+import Obstacles.*;
 
 public class Forest extends BattleLocation {
     public Forest(Player player) {

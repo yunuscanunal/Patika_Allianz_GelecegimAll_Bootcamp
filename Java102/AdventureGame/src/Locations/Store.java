@@ -1,6 +1,6 @@
 package Locations;
-import player.*;
-import items.*;
+import Players.*;
+import Items.*;
 
 public class Store extends NormalLocation {
     public int pickedToolID;

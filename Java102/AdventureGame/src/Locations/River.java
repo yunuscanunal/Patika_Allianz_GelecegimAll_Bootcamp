@@ -1,6 +1,6 @@
 package Locations;
-import player.*;
-import obstacle.*;
+import Players.*;
+import Obstacles.*;
 
 public class River extends BattleLocation {
     public River(Player player) {

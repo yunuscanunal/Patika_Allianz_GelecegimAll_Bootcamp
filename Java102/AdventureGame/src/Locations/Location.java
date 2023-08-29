@@ -1,5 +1,5 @@
 package Locations;
-import player.*;
+import Players.*;
 import java.util.Scanner;
 
 public abstract class Location {

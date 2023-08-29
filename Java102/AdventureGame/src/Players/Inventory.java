@@ -1,5 +1,5 @@
 package Players;
-import items.*;
+import Items.*;
 import java.util.ArrayList;
 
 public class Inventory {

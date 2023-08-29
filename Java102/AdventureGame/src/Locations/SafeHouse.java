@@ -1,5 +1,5 @@
 package Locations;
-import player.*;
+import Players.*;
 
 public class SafeHouse extends NormalLocation {
     public SafeHouse(Player player) {
